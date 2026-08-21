@@ -1,0 +1,16 @@
+App_ID,App_Name,Category,Field_Checked,Pass1_Claim,Pass2_Actual,Accuracy_Status,Root_Cause_Fix
+1,Salesforce,CRM and Sales,self_serve,self-serve,self-serve,CORRECT,Developer edition free signup verified
+13,Freshdesk,Support and Helpdesk,auth_methods,API key,API key + Basic,CORRECTED,"Pass 1 marked Freshdesk as API key only; Pass 2 corrected to API key via Basic Auth header (API key passed as Basic Auth username)"
+28,WhatsApp Business,Communications and Messaging,self_serve,partially gated,partially gated,CORRECT,Meta Business verification required
+31,Google Ads,"Marketing, Ads, Email and Social",buildability_verdict,buildable with friction,buildable with friction,CORRECT,Developer token review queue required
+37,systeme.io,"Marketing, Ads, Email and Social",has_mcp_server,true,false,CORRECTED,Pass 1 claimed systeme.io has MCP server; Pass 2 corrected to False / No official MCP exists
+58,Sherlock,"Data, SEO and Scraping",api_surface,REST,"none public (local CLI)",CORRECTED,Pass 1 assumed Sherlock had REST API; Pass 2 corrected to local Python CLI tool with no public API hosted
+65,Supabase,"Developer, Infra and Data platforms",has_mcp_server,true,true,CORRECT,Official Supabase MCP server verified
+73,Linear,Productivity and Project Management,has_mcp_server,true,true,CORRECT,GraphQL + native MCP server verified
+84,Paygent Connect,Finance and Fintech,buildability_verdict,blocked,blocked,CORRECT,Japanese merchant underwriting required
+88,Brex,Finance and Fintech,self_serve,gated,gated,CORRECT,Corporate card account required
+90,PitchBook,Finance and Fintech,self_serve,gated,gated,CORRECT,Enterprise contract required
+81,Stripe,Finance and Fintech,auth_methods,API key,API key,CORRECT,Bearer secret key verified
+71,Notion,Productivity and Project Management,has_mcp_server,true,true,CORRECT,Official Notion MCP server verified
+83,Binance,Finance and Fintech,auth_methods,API key + HMAC secret,API key + HMAC secret,CORRECT,API key and HMAC signing verified
+98,Mermaid CLI,"AI, Research and Media-native",api_surface,"none public (local CLI)","none public (local CLI)",CORRECT,"Node CLI tool, no public API"
