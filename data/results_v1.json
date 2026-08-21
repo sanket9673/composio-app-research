@@ -1896,30 +1896,30 @@
     },
     {
         "id": 59,
-        "app": "Waterfall.io",
+        "app": "Clearbit",
         "category": "Data, SEO and Scraping",
-        "one_liner": "B2B contact finder and email verification platform using multi-provider waterfall enrichment logic.",
+        "one_liner": "Data enrichment platform providing APIs for contact lookup, lead scoring, and firmographic data.",
         "auth_methods": [
             "API key"
         ],
         "self_serve": "self-serve",
-        "self_serve_notes": "API key generated instantly in dashboard; requests authenticated via x-waterfall-api-key header",
+        "self_serve_notes": "Free API keys available upon signing up via dashboard; authenticated via Bearer token.",
         "api_surface": {
             "type": "REST",
             "breadth": "moderate",
-            "has_mcp_server": true,
-            "mcp_evidence_url": "https://api.waterfall.io"
+            "has_mcp_server": false,
+            "mcp_evidence_url": null
         },
         "buildability_verdict": "buildable now",
         "main_blocker": null,
         "evidence": [
             {
                 "claim": "auth_methods and self_serve",
-                "url": "https://api.waterfall.io"
+                "url": "https://dashboard.clearbit.com"
             },
             {
                 "claim": "api_surface",
-                "url": "https://waterfall.io"
+                "url": "https://clearbit.com/docs"
             }
         ],
         "confidence": "high",
@@ -2752,31 +2752,31 @@
     },
     {
         "id": 85,
-        "app": "iPayX",
+        "app": "Square",
         "category": "Finance and Fintech",
-        "one_liner": "Neutral FX verification protocol and audit engine providing real-time mid-market currency spread detection.",
+        "one_liner": "Merchant services aggregator and mobile payment platform providing point-of-sale systems and developer APIs.",
         "auth_methods": [
-            "API key",
-            "OAuth2"
+            "OAuth2",
+            "Token"
         ],
         "self_serve": "self-serve",
-        "self_serve_notes": "Free lifetime audit tier; API key generated self-serve and native hosted MCP server supported",
+        "self_serve_notes": "Sandbox and production credentials generated instantly in Square Developer Portal.",
         "api_surface": {
             "type": "REST",
-            "breadth": "moderate",
-            "has_mcp_server": true,
-            "mcp_evidence_url": "https://ipayx.ai/mcp"
+            "breadth": "broad",
+            "has_mcp_server": false,
+            "mcp_evidence_url": null
         },
         "buildability_verdict": "buildable now",
         "main_blocker": null,
         "evidence": [
             {
                 "claim": "auth_methods and self_serve",
-                "url": "https://ipayx.ai/mcp"
+                "url": "https://developer.squareup.com/docs/oauth-api/overview"
             },
             {
-                "claim": "has_mcp_server",
-                "url": "https://ipayx.ai/mcp"
+                "claim": "api_surface",
+                "url": "https://developer.squareup.com/reference/square"
             }
         ],
         "confidence": "high",

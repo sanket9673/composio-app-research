@@ -12,7 +12,7 @@ This repository demonstrates a complete dual-pass verification loop:
 
 The repository includes a premium, single-page interactive dashboard (`index.html`) featuring:
 * **Top Metric Analytics**: Overview of OAuth2 dominance, overall self-serve percentage, category rankings, and primary integration blockers.
-* **InteractiveFindings Matrix**: Search, filter, and browse all 100 apps with color-coded badges and direct documentation links.
+* **Interactive Findings Matrix**: Search, filter, and browse all 100 apps with color-coded badges and direct documentation links.
 * **Verification Proof Table**: Full audit history showing Pass 1 claims vs Pass 2 actuals for 15 representative applications.
 * **Structured Data**: Embedded JSON-LD schema for machine consumption and automated agents.
 
@@ -56,13 +56,13 @@ COMPOSIO_API_KEY=your_composio_api_key_here
 #### Execute Pass 1 (Raw Research)
 Generates the raw dataset `data/results_v1.json` based on the search grounding loop:
 ```bash
-python research_agent.py
+python research_agent.py --run
 ```
 
 #### Execute Pass 2 (Apply Verification Corrections)
 Applies the audit corrections from `data/verification.csv`, runs a sanitization sweep across all 100 apps to clean up hallucinated MCP servers/fake URLs, validates records using Pydantic, and writes to `data/results_v2_verified.json`:
 ```bash
-python research_agent.py --apply-corrections
+python research_agent.py --verify
 ```
 
 ---
