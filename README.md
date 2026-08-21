@@ -2,7 +2,12 @@
 
 An enterprise-grade research pipeline and interactive dashboard auditing **100 popular SaaS applications** for AI agent buildability, authentication methods, gating parameters, and Model Context Protocol (MCP) server support.
 
-**Live Deployed Dashboard**: [https://composio-app.netlify.app/](https://composio-app.netlify.app/)
+* **Live Deployed Dashboard**: [https://composio-app.netlify.app/](https://composio-app.netlify.app/)
+* **Source Code Repository**: [https://github.com/sanket9673/composio-app-research](https://github.com/sanket9673/composio-app-research)
+
+---
+
+## 📌 Project Overview
 
 This repository demonstrates a complete dual-pass verification loop:
 1. **Pass 1 (Raw Research)**: An automated research run retrieving app metadata and document URLs using Google Search Grounding with Gemini.
@@ -10,72 +15,18 @@ This repository demonstrates a complete dual-pass verification loop:
 
 ---
 
-## Dashboard Preview
+## 📊 Dashboard Preview & Features
 
-The repository includes a premium, single-page interactive dashboard (`index.html`) featuring:
-* **Top Metric Analytics**: Overview of OAuth2 dominance, overall self-serve percentage, category rankings, and primary integration blockers.
-* **Interactive Findings Matrix**: Search, filter, and browse all 100 apps with color-coded badges and direct documentation links.
-* **Verification Proof Table**: Full audit history showing Pass 1 claims vs Pass 2 actuals for 15 representative applications.
-* **Structured Data**: Embedded JSON-LD schema for machine consumption and automated agents.
-
----
-
-## Repository Data Layout
-
-* [`research_agent.py`](file:///Users/sanketkisanchavhan/Documents/What%20to%20do/research_agent.py): Asynchronous/batched research pipeline script supporting Gemini search grounding, Pydantic validation, and manual audit correction loading.
-* [`requirements.txt`](file:///Users/sanketkisanchavhan/Documents/What%20to%20do/requirements.txt): Declared Python package requirements.
-* [`data/results_v1.json`](file:///Users/sanketkisanchavhan/Documents/What%20to%20do/data/results_v1.json): Raw Pass 1 output containing the initial automated research dataset (including hallucinations and placeholder domains).
-* [`data/results_v2_verified.json`](file:///Users/sanketkisanchavhan/Documents/What%20to%20do/data/results_v2_verified.json): Grounded, verified Pass 2 dataset with corrected documentation domains and realistic MCP mapping.
-* [`data/verification.csv`](file:///Users/sanketkisanchavhan/Documents/What%20to%20do/data/verification.csv): 15-app audit sample tracking the verification delta (yielding 80.0% Pass 1 accuracy scaling to 100% in Pass 2).
-* [`index.html`](file:///Users/sanketkisanchavhan/Documents/What%20to%20do/index.html): Highly interactive single-page dashboard.
+The repository includes a single-page interactive dashboard (`index.html`) deployed live on Netlify:
+* **Top Metric Analytics**: Overview of OAuth2 dominance (70%), overall self-serve percentage (74%), category rankings, and primary integration blockers.
+* **Strategic Opportunity Matrix**: Dedicated breakdown contrasting 5 concrete **Easy Wins** (*Supabase, Linear, Notion, GitHub, Stripe*) against 5 **Needs Outreach** platforms (*PitchBook, DealCloud, Brex, Ramp, Paygent Connect*).
+* **Interactive Findings Matrix**: Search, filter, and browse all 100 apps with color-coded badges, `⚡ Composio Native` tags, and direct documentation links.
+* **Verification Proof Table**: Full audit history showing Pass 1 claims vs Pass 2 actuals for 15 representative applications (yielding an 80% to 100% accuracy delta).
+* **Structured Data**: Embedded JSON-LD schema (`TechArticle`) for machine consumption and automated agents.
 
 ---
 
-## Quick Start Guide
-
-### Prerequisites
-* Python 3.9 or higher
-* Pip package manager
-
-### 1. Installation
-Clone the repository and install dependencies:
-```bash
-git clone https://github.com/sanket9673/composio-app-research.git
-cd composio-app-research
-pip install -r requirements.txt
-```
-
-### 2. Environment Configuration
-Create a `.env` file in the project root to configure credentials:
-```env
-GEMINI_API_KEY=your_gemini_api_key_here
-COMPOSIO_API_KEY=your_composio_api_key_here
-```
-*Note: If no API key is found, the script will run in **offline simulator mode** utilizing the cached dataset to ensure the pipeline executes successfully.*
-
-### 3. Running the Pipeline
-
-#### Execute Pass 1 (Raw Research)
-Generates the raw dataset `data/results_v1.json` based on the search grounding loop:
-```bash
-python research_agent.py --run
-```
-
-#### Execute Pass 2 (Apply Verification Corrections)
-Applies the audit corrections from `data/verification.csv`, runs a sanitization sweep across all 100 apps to clean up hallucinated MCP servers/fake URLs, validates records using Pydantic, and writes to `data/results_v2_verified.json`:
-```bash
-python research_agent.py --verify
-```
-
----
-## Live Deliverables
-
-* **Live Interactive Dashboard**: [https://composio-app.netlify.app/](https://composio-app.netlify.app/)
-* **Source Code Repository**: [https://github.com/sanket9673/composio-app-research](https://github.com/sanket9673/composio-app-research)
-
----
-
-## Architecture & Pipeline Overview
+## 🏗️ Architecture & Request Pipeline
 
 ```mermaid
 graph TD;
@@ -124,9 +75,58 @@ graph TD;
 
 ---
 
-## Verification Methodology & Grounding
+## 📁 Repository Data Layout
 
-The initial automated research run suffered from typical LLM decay, incorrectly claiming a **96% MCP server adoption rate** with hallucinated subdomains like `mcp.podio.com`. 
+* [`research_agent.py`](research_agent.py): Asynchronous research pipeline script supporting Gemini search grounding, Pydantic validation, Composio SDK tool registry lookup, and manual audit correction sweeps.
+* [`requirements.txt`](requirements.txt): Declared Python package requirements (google-genai, composio-core, pydantic, pandas, beautifulsoup4).
+* [`data/results_v1.json`](data/results_v1.json): Raw Pass 1 output containing the initial automated research dataset (including initial hallucinations and unverified claims).
+* [`data/results_v2_verified.json`](data/results_v2_verified.json): Grounded, verified Pass 2 dataset with corrected documentation domains and realistic MCP mapping.
+* [`data/verification.csv`](data/verification.csv): 15-app audit sample tracking the verification delta (yielding 80.0% Pass 1 accuracy scaling to 100% in Pass 2).
+* [`index.html`](index.html): Highly interactive single-page Tailwind CSS glassmorphic dashboard deployed live on Netlify.
+
+---
+
+## ⚡ Quick Start Guide
+
+### Prerequisites
+* Python 3.9 or higher
+* Pip package manager
+
+### 1. Installation
+Clone the repository and install dependencies:
+```bash
+git clone https://github.com/sanket9673/composio-app-research.git
+cd composio-app-research
+pip install -r requirements.txt
+```
+
+### 2. Environment Configuration
+Create a `.env` file in the project root to configure credentials:
+```env
+GEMINI_API_KEY=your_gemini_api_key_here
+COMPOSIO_API_KEY=your_composio_api_key_here
+```
+*Note: If no API key is found, the script automatically executes in offline simulator mode utilizing the cached dataset to ensure the pipeline runs successfully without requiring external credentials.*
+
+### 3. Running the Pipeline
+
+#### Execute Pass 1 (Raw Research)
+Generates the raw dataset `data/results_v1.json` based on the search grounding loop:
+```bash
+python research_agent.py --run
+```
+
+#### Execute Pass 2 (Apply Verification Sweep)
+Applies the audit corrections from `data/verification.csv`, runs a sanitization sweep across all 100 apps to clean up hallucinated MCP servers/fake URLs, validates records using Pydantic, and writes to `data/results_v2_verified.json`:
+```bash
+python research_agent.py --verify
+```
+
+---
+
+## 🔬 Verification Methodology & Grounding
+
+The initial automated research run suffered from typical LLM decay, incorrectly claiming a **96% MCP server adoption rate** with hallucinated subdomains like `mcp.podio.com`.
 
 Our verification loop addresses this through:
 1. **Manual Audit Sampling**: A 15-app representative sample (`data/verification.csv`) evaluated across all 10 categories to catch systematic errors (e.g., classifying Basic Authentication as plain API key, or command-line utilities as REST APIs).
@@ -134,7 +134,7 @@ Our verification loop addresses this through:
 
 ---
 
-## Human-in-the-Loop & Gating Analysis
+## 🛡️ Human-in-the-Loop & Gating Analysis
 
 Automated agents are blocked by platform-level gating. We flag apps as `needs_human_review` for:
 * **Enterprise paywalls**: Gated behind direct corporate contact (e.g., PitchBook).
