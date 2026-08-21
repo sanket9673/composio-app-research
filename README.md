@@ -38,7 +38,7 @@ The repository includes a premium, single-page interactive dashboard (`index.htm
 ### 1. Installation
 Clone the repository and install dependencies:
 ```bash
-git clone https://github.com/sanketkisanchavhan/composio-app-research.git
+git clone https://github.com/sanket9673/composio-app-research.git
 cd composio-app-research
 pip install -r requirements.txt
 ```
@@ -69,7 +69,7 @@ python research_agent.py --verify
 ## Live Deliverables
 
 * **Live Interactive Dashboard**: [https://composio-app.netlify.app/](https://composio-app.netlify.app/)
-* **Source Code Repository**: [https://github.com/sanketkisanchavhan/composio-app-research](https://github.com/sanketkisanchavhan/composio-app-research)
+* **Source Code Repository**: [https://github.com/sanket9673/composio-app-research](https://github.com/sanket9673/composio-app-research)
 
 ---
 
