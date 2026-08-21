@@ -2,6 +2,8 @@
 
 An enterprise-grade research pipeline and interactive dashboard auditing **100 popular SaaS applications** for AI agent buildability, authentication methods, gating parameters, and Model Context Protocol (MCP) server support.
 
+**Live Deployed Dashboard**: [https://composio-app.netlify.app/](https://composio-app.netlify.app/)
+
 This repository demonstrates a complete dual-pass verification loop:
 1. **Pass 1 (Raw Research)**: An automated research run retrieving app metadata and document URLs using Google Search Grounding with Gemini.
 2. **Pass 2 (Verification Sweep)**: Applies corrections from a manual 15-app audit sample and executes a dataset-wide validation sweep to eliminate hallucinations, correcting the Model Context Protocol (MCP) adoption rate from 96% down to a realistic, grounded **14%**.
