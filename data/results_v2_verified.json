@@ -25,7 +25,8 @@
         ],
         "confidence": "high",
         "needs_human_review": false,
-        "human_review_reason": null
+        "human_review_reason": null,
+        "composio_native_support": true
     },
     {
         "id": 2,
@@ -58,7 +59,8 @@
         ],
         "confidence": "high",
         "needs_human_review": false,
-        "human_review_reason": null
+        "human_review_reason": null,
+        "composio_native_support": true
     },
     {
         "id": 3,
@@ -91,7 +93,8 @@
         ],
         "confidence": "high",
         "needs_human_review": false,
-        "human_review_reason": null
+        "human_review_reason": null,
+        "composio_native_support": true
     },
     {
         "id": 4,
@@ -120,7 +123,8 @@
         ],
         "confidence": "high",
         "needs_human_review": false,
-        "human_review_reason": null
+        "human_review_reason": null,
+        "composio_native_support": true
     },
     {
         "id": 5,
@@ -149,7 +153,8 @@
         ],
         "confidence": "high",
         "needs_human_review": false,
-        "human_review_reason": null
+        "human_review_reason": null,
+        "composio_native_support": true
     },
     {
         "id": 6,
@@ -177,7 +182,8 @@
         ],
         "confidence": "high",
         "needs_human_review": false,
-        "human_review_reason": null
+        "human_review_reason": null,
+        "composio_native_support": true
     },
     {
         "id": 7,
@@ -205,7 +211,8 @@
         ],
         "confidence": "high",
         "needs_human_review": false,
-        "human_review_reason": null
+        "human_review_reason": null,
+        "composio_native_support": true
     },
     {
         "id": 8,
@@ -238,7 +245,8 @@
         ],
         "confidence": "high",
         "needs_human_review": false,
-        "human_review_reason": null
+        "human_review_reason": null,
+        "composio_native_support": true
     },
     {
         "id": 9,
@@ -271,7 +279,8 @@
         ],
         "confidence": "high",
         "needs_human_review": false,
-        "human_review_reason": null
+        "human_review_reason": null,
+        "composio_native_support": true
     },
     {
         "id": 10,
@@ -300,7 +309,8 @@
         ],
         "confidence": "high",
         "needs_human_review": true,
-        "human_review_reason": "Gated enterprise product requiring customer account access, though public developer API and MCP docs exist."
+        "human_review_reason": "Gated enterprise product requiring customer account access, though public developer API and MCP docs exist.",
+        "composio_native_support": true
     },
     {
         "id": 11,
@@ -330,7 +340,8 @@
         ],
         "confidence": "high",
         "needs_human_review": false,
-        "human_review_reason": null
+        "human_review_reason": null,
+        "composio_native_support": true
     },
     {
         "id": 12,
@@ -359,7 +370,8 @@
         ],
         "confidence": "high",
         "needs_human_review": false,
-        "human_review_reason": null
+        "human_review_reason": null,
+        "composio_native_support": true
     },
     {
         "id": 13,
@@ -388,7 +400,8 @@
         ],
         "confidence": "high",
         "needs_human_review": false,
-        "human_review_reason": null
+        "human_review_reason": null,
+        "composio_native_support": true
     },
     {
         "id": 14,
@@ -417,7 +430,8 @@
         ],
         "confidence": "high",
         "needs_human_review": false,
-        "human_review_reason": null
+        "human_review_reason": null,
+        "composio_native_support": true
     },
     {
         "id": 15,
@@ -446,7 +460,8 @@
         ],
         "confidence": "high",
         "needs_human_review": false,
-        "human_review_reason": null
+        "human_review_reason": null,
+        "composio_native_support": false
     },
     {
         "id": 16,
@@ -474,7 +489,8 @@
         ],
         "confidence": "high",
         "needs_human_review": false,
-        "human_review_reason": null
+        "human_review_reason": null,
+        "composio_native_support": false
     },
     {
         "id": 17,
@@ -503,7 +519,8 @@
         ],
         "confidence": "high",
         "needs_human_review": false,
-        "human_review_reason": null
+        "human_review_reason": null,
+        "composio_native_support": false
     },
     {
         "id": 18,
@@ -532,7 +549,8 @@
         ],
         "confidence": "high",
         "needs_human_review": false,
-        "human_review_reason": null
+        "human_review_reason": null,
+        "composio_native_support": true
     },
     {
         "id": 19,
@@ -562,7 +580,8 @@
         ],
         "confidence": "high",
         "needs_human_review": false,
-        "human_review_reason": null
+        "human_review_reason": null,
+        "composio_native_support": true
     },
     {
         "id": 20,
@@ -595,7 +614,8 @@
         ],
         "confidence": "high",
         "needs_human_review": true,
-        "human_review_reason": "Enterprise sales-gated account setup required to test/provision API credentials, though REST API is fully documented."
+        "human_review_reason": "Enterprise sales-gated account setup required to test/provision API credentials, though REST API is fully documented.",
+        "composio_native_support": false
     },
     {
         "id": 21,
@@ -628,7 +648,8 @@
         ],
         "confidence": "high",
         "needs_human_review": false,
-        "human_review_reason": null
+        "human_review_reason": null,
+        "composio_native_support": true
     },
     {
         "id": 22,
@@ -661,7 +682,8 @@
         ],
         "confidence": "high",
         "needs_human_review": false,
-        "human_review_reason": null
+        "human_review_reason": null,
+        "composio_native_support": true
     },
     {
         "id": 23,
@@ -693,7 +715,8 @@
         ],
         "confidence": "high",
         "needs_human_review": false,
-        "human_review_reason": null
+        "human_review_reason": null,
+        "composio_native_support": true
     },
     {
         "id": 24,
@@ -726,7 +749,8 @@
         ],
         "confidence": "high",
         "needs_human_review": false,
-        "human_review_reason": null
+        "human_review_reason": null,
+        "composio_native_support": true
     },
     {
         "id": 25,
@@ -759,7 +783,8 @@
         ],
         "confidence": "high",
         "needs_human_review": false,
-        "human_review_reason": null
+        "human_review_reason": null,
+        "composio_native_support": false
     },
     {
         "id": 26,
@@ -792,7 +817,8 @@
         ],
         "confidence": "high",
         "needs_human_review": false,
-        "human_review_reason": null
+        "human_review_reason": null,
+        "composio_native_support": true
     },
     {
         "id": 27,
@@ -825,7 +851,8 @@
         ],
         "confidence": "high",
         "needs_human_review": false,
-        "human_review_reason": null
+        "human_review_reason": null,
+        "composio_native_support": true
     },
     {
         "id": 28,
@@ -858,7 +885,8 @@
         ],
         "confidence": "high",
         "needs_human_review": false,
-        "human_review_reason": null
+        "human_review_reason": null,
+        "composio_native_support": true
     },
     {
         "id": 29,
@@ -891,7 +919,8 @@
         ],
         "confidence": "high",
         "needs_human_review": false,
-        "human_review_reason": null
+        "human_review_reason": null,
+        "composio_native_support": true
     },
     {
         "id": 30,
@@ -925,7 +954,8 @@
         ],
         "confidence": "high",
         "needs_human_review": false,
-        "human_review_reason": null
+        "human_review_reason": null,
+        "composio_native_support": true
     },
     {
         "id": 31,
@@ -957,7 +987,8 @@
         ],
         "confidence": "high",
         "needs_human_review": true,
-        "human_review_reason": "OAuth scopes locked until app review and brand verification are complete"
+        "human_review_reason": "OAuth scopes locked until app review and brand verification are complete",
+        "composio_native_support": true
     },
     {
         "id": 32,
@@ -990,7 +1021,8 @@
         ],
         "confidence": "high",
         "needs_human_review": true,
-        "human_review_reason": "OAuth scopes locked until app review and brand verification are complete"
+        "human_review_reason": "OAuth scopes locked until app review and brand verification are complete",
+        "composio_native_support": true
     },
     {
         "id": 33,
@@ -1022,7 +1054,8 @@
         ],
         "confidence": "high",
         "needs_human_review": true,
-        "human_review_reason": "OAuth scopes locked until app review and brand verification are complete"
+        "human_review_reason": "OAuth scopes locked until app review and brand verification are complete",
+        "composio_native_support": true
     },
     {
         "id": 34,
@@ -1055,7 +1088,8 @@
         ],
         "confidence": "high",
         "needs_human_review": false,
-        "human_review_reason": null
+        "human_review_reason": null,
+        "composio_native_support": true
     },
     {
         "id": 35,
@@ -1088,7 +1122,8 @@
         ],
         "confidence": "high",
         "needs_human_review": false,
-        "human_review_reason": null
+        "human_review_reason": null,
+        "composio_native_support": true
     },
     {
         "id": 36,
@@ -1121,7 +1156,8 @@
         ],
         "confidence": "high",
         "needs_human_review": false,
-        "human_review_reason": null
+        "human_review_reason": null,
+        "composio_native_support": true
     },
     {
         "id": 37,
@@ -1149,7 +1185,8 @@
         ],
         "confidence": "high",
         "needs_human_review": false,
-        "human_review_reason": null
+        "human_review_reason": null,
+        "composio_native_support": false
     },
     {
         "id": 38,
@@ -1181,7 +1218,8 @@
         ],
         "confidence": "high",
         "needs_human_review": false,
-        "human_review_reason": null
+        "human_review_reason": null,
+        "composio_native_support": true
     },
     {
         "id": 39,
@@ -1213,7 +1251,8 @@
         ],
         "confidence": "high",
         "needs_human_review": false,
-        "human_review_reason": null
+        "human_review_reason": null,
+        "composio_native_support": false
     },
     {
         "id": 40,
@@ -1245,7 +1284,8 @@
         ],
         "confidence": "high",
         "needs_human_review": false,
-        "human_review_reason": null
+        "human_review_reason": null,
+        "composio_native_support": true
     },
     {
         "id": 41,
@@ -1278,7 +1318,8 @@
         ],
         "confidence": "high",
         "needs_human_review": false,
-        "human_review_reason": null
+        "human_review_reason": null,
+        "composio_native_support": true
     },
     {
         "id": 42,
@@ -1312,7 +1353,8 @@
         ],
         "confidence": "high",
         "needs_human_review": false,
-        "human_review_reason": null
+        "human_review_reason": null,
+        "composio_native_support": true
     },
     {
         "id": 43,
@@ -1345,7 +1387,8 @@
         ],
         "confidence": "high",
         "needs_human_review": false,
-        "human_review_reason": null
+        "human_review_reason": null,
+        "composio_native_support": true
     },
     {
         "id": 44,
@@ -1377,7 +1420,8 @@
         ],
         "confidence": "high",
         "needs_human_review": true,
-        "human_review_reason": "Enterprise customer account required to provision sandbox tenant and client credentials."
+        "human_review_reason": "Enterprise customer account required to provision sandbox tenant and client credentials.",
+        "composio_native_support": true
     },
     {
         "id": 45,
@@ -1410,7 +1454,8 @@
         ],
         "confidence": "high",
         "needs_human_review": false,
-        "human_review_reason": null
+        "human_review_reason": null,
+        "composio_native_support": true
     },
     {
         "id": 46,
@@ -1443,7 +1488,8 @@
         ],
         "confidence": "high",
         "needs_human_review": false,
-        "human_review_reason": null
+        "human_review_reason": null,
+        "composio_native_support": true
     },
     {
         "id": 47,
@@ -1475,7 +1521,8 @@
         ],
         "confidence": "high",
         "needs_human_review": false,
-        "human_review_reason": null
+        "human_review_reason": null,
+        "composio_native_support": true
     },
     {
         "id": 48,
@@ -1508,7 +1555,8 @@
         ],
         "confidence": "high",
         "needs_human_review": false,
-        "human_review_reason": null
+        "human_review_reason": null,
+        "composio_native_support": true
     },
     {
         "id": 49,
@@ -1540,7 +1588,8 @@
         ],
         "confidence": "high",
         "needs_human_review": false,
-        "human_review_reason": null
+        "human_review_reason": null,
+        "composio_native_support": true
     },
     {
         "id": 50,
@@ -1573,7 +1622,8 @@
         ],
         "confidence": "high",
         "needs_human_review": true,
-        "human_review_reason": "Platform integration is gated/partner-enabled for complete product/order endpoint access."
+        "human_review_reason": "Platform integration is gated/partner-enabled for complete product/order endpoint access.",
+        "composio_native_support": false
     },
     {
         "id": 51,
@@ -1606,7 +1656,8 @@
         ],
         "confidence": "high",
         "needs_human_review": false,
-        "human_review_reason": null
+        "human_review_reason": null,
+        "composio_native_support": false
     },
     {
         "id": 52,
@@ -1638,7 +1689,8 @@
         ],
         "confidence": "high",
         "needs_human_review": false,
-        "human_review_reason": null
+        "human_review_reason": null,
+        "composio_native_support": false
     },
     {
         "id": 53,
@@ -1671,7 +1723,8 @@
         ],
         "confidence": "high",
         "needs_human_review": false,
-        "human_review_reason": null
+        "human_review_reason": null,
+        "composio_native_support": false
     },
     {
         "id": 54,
@@ -1703,7 +1756,8 @@
         ],
         "confidence": "high",
         "needs_human_review": false,
-        "human_review_reason": null
+        "human_review_reason": null,
+        "composio_native_support": false
     },
     {
         "id": 55,
@@ -1720,7 +1774,7 @@
             "type": "REST",
             "breadth": "broad",
             "has_mcp_server": true,
-            "mcp_evidence_url": "https://composio.dev"
+            "mcp_evidence_url": "https://github.com/apify/mcp-server-apify"
         },
         "buildability_verdict": "buildable now",
         "main_blocker": null,
@@ -1731,12 +1785,13 @@
             },
             {
                 "claim": "has_mcp_server",
-                "url": "https://composio.dev"
+                "url": "https://docs.apify.com/api/v2"
             }
         ],
         "confidence": "high",
         "needs_human_review": false,
-        "human_review_reason": null
+        "human_review_reason": null,
+        "composio_native_support": true
     },
     {
         "id": 56,
@@ -1763,12 +1818,13 @@
             },
             {
                 "claim": "has_mcp_server",
-                "url": "https://composio.dev"
+                "url": "https://docs.firecrawl.dev/api-reference"
             }
         ],
         "confidence": "high",
         "needs_human_review": false,
-        "human_review_reason": null
+        "human_review_reason": null,
+        "composio_native_support": true
     },
     {
         "id": 57,
@@ -1801,7 +1857,8 @@
         ],
         "confidence": "high",
         "needs_human_review": false,
-        "human_review_reason": null
+        "human_review_reason": null,
+        "composio_native_support": false
     },
     {
         "id": 58,
@@ -1829,7 +1886,8 @@
         ],
         "confidence": "high",
         "needs_human_review": false,
-        "human_review_reason": null
+        "human_review_reason": null,
+        "composio_native_support": false
     },
     {
         "id": 59,
@@ -1861,7 +1919,8 @@
         ],
         "confidence": "high",
         "needs_human_review": false,
-        "human_review_reason": null
+        "human_review_reason": null,
+        "composio_native_support": true
     },
     {
         "id": 60,
@@ -1893,7 +1952,8 @@
         ],
         "confidence": "high",
         "needs_human_review": false,
-        "human_review_reason": null
+        "human_review_reason": null,
+        "composio_native_support": true
     },
     {
         "id": 61,
@@ -1921,12 +1981,13 @@
             },
             {
                 "claim": "has_mcp_server",
-                "url": "https://composio.dev"
+                "url": "https://github.com/github/mcp-server"
             }
         ],
         "confidence": "high",
         "needs_human_review": false,
-        "human_review_reason": null
+        "human_review_reason": null,
+        "composio_native_support": true
     },
     {
         "id": 62,
@@ -1959,7 +2020,8 @@
         ],
         "confidence": "high",
         "needs_human_review": false,
-        "human_review_reason": null
+        "human_review_reason": null,
+        "composio_native_support": true
     },
     {
         "id": 63,
@@ -1992,7 +2054,8 @@
         ],
         "confidence": "high",
         "needs_human_review": false,
-        "human_review_reason": null
+        "human_review_reason": null,
+        "composio_native_support": true
     },
     {
         "id": 64,
@@ -2009,7 +2072,7 @@
             "type": "REST",
             "breadth": "broad",
             "has_mcp_server": true,
-            "mcp_evidence_url": "https://composio.dev"
+            "mcp_evidence_url": "https://github.com/cloudflare/mcp-cloudflare-tunnel"
         },
         "buildability_verdict": "buildable now",
         "main_blocker": null,
@@ -2020,12 +2083,13 @@
             },
             {
                 "claim": "has_mcp_server",
-                "url": "https://composio.dev"
+                "url": "https://developers.cloudflare.com/api"
             }
         ],
         "confidence": "high",
         "needs_human_review": false,
-        "human_review_reason": null
+        "human_review_reason": null,
+        "composio_native_support": true
     },
     {
         "id": 65,
@@ -2053,12 +2117,13 @@
             },
             {
                 "claim": "has_mcp_server",
-                "url": "https://composio.dev"
+                "url": "https://supabase.com/docs"
             }
         ],
         "confidence": "high",
         "needs_human_review": false,
-        "human_review_reason": null
+        "human_review_reason": null,
+        "composio_native_support": true
     },
     {
         "id": 66,
@@ -2088,7 +2153,8 @@
         ],
         "confidence": "high",
         "needs_human_review": false,
-        "human_review_reason": null
+        "human_review_reason": null,
+        "composio_native_support": true
     },
     {
         "id": 67,
@@ -2122,7 +2188,8 @@
         ],
         "confidence": "high",
         "needs_human_review": false,
-        "human_review_reason": null
+        "human_review_reason": null,
+        "composio_native_support": true
     },
     {
         "id": 68,
@@ -2155,7 +2222,8 @@
         ],
         "confidence": "high",
         "needs_human_review": false,
-        "human_review_reason": null
+        "human_review_reason": null,
+        "composio_native_support": true
     },
     {
         "id": 69,
@@ -2188,7 +2256,8 @@
         ],
         "confidence": "high",
         "needs_human_review": false,
-        "human_review_reason": null
+        "human_review_reason": null,
+        "composio_native_support": true
     },
     {
         "id": 70,
@@ -2216,12 +2285,13 @@
             },
             {
                 "claim": "has_mcp_server",
-                "url": "https://composio.dev"
+                "url": "https://docs.sentry.io/api"
             }
         ],
         "confidence": "high",
         "needs_human_review": false,
-        "human_review_reason": null
+        "human_review_reason": null,
+        "composio_native_support": true
     },
     {
         "id": 71,
@@ -2249,12 +2319,13 @@
             },
             {
                 "claim": "has_mcp_server",
-                "url": "https://composio.dev"
+                "url": "https://developers.notion.com"
             }
         ],
         "confidence": "high",
         "needs_human_review": false,
-        "human_review_reason": null
+        "human_review_reason": null,
+        "composio_native_support": true
     },
     {
         "id": 72,
@@ -2287,7 +2358,8 @@
         ],
         "confidence": "high",
         "needs_human_review": false,
-        "human_review_reason": null
+        "human_review_reason": null,
+        "composio_native_support": true
     },
     {
         "id": 73,
@@ -2315,12 +2387,13 @@
             },
             {
                 "claim": "has_mcp_server",
-                "url": "https://composio.dev"
+                "url": "https://developers.linear.app/docs"
             }
         ],
         "confidence": "high",
         "needs_human_review": false,
-        "human_review_reason": null
+        "human_review_reason": null,
+        "composio_native_support": true
     },
     {
         "id": 74,
@@ -2354,7 +2427,8 @@
         ],
         "confidence": "high",
         "needs_human_review": false,
-        "human_review_reason": null
+        "human_review_reason": null,
+        "composio_native_support": true
     },
     {
         "id": 75,
@@ -2383,7 +2457,8 @@
         ],
         "confidence": "high",
         "needs_human_review": false,
-        "human_review_reason": null
+        "human_review_reason": null,
+        "composio_native_support": true
     },
     {
         "id": 76,
@@ -2416,7 +2491,8 @@
         ],
         "confidence": "high",
         "needs_human_review": false,
-        "human_review_reason": null
+        "human_review_reason": null,
+        "composio_native_support": true
     },
     {
         "id": 77,
@@ -2449,7 +2525,8 @@
         ],
         "confidence": "high",
         "needs_human_review": false,
-        "human_review_reason": null
+        "human_review_reason": null,
+        "composio_native_support": true
     },
     {
         "id": 78,
@@ -2478,7 +2555,8 @@
         ],
         "confidence": "high",
         "needs_human_review": false,
-        "human_review_reason": null
+        "human_review_reason": null,
+        "composio_native_support": true
     },
     {
         "id": 79,
@@ -2511,7 +2589,8 @@
         ],
         "confidence": "high",
         "needs_human_review": false,
-        "human_review_reason": null
+        "human_review_reason": null,
+        "composio_native_support": true
     },
     {
         "id": 80,
@@ -2544,7 +2623,8 @@
         ],
         "confidence": "high",
         "needs_human_review": false,
-        "human_review_reason": null
+        "human_review_reason": null,
+        "composio_native_support": true
     },
     {
         "id": 81,
@@ -2577,7 +2657,8 @@
         ],
         "confidence": "high",
         "needs_human_review": false,
-        "human_review_reason": null
+        "human_review_reason": null,
+        "composio_native_support": true
     },
     {
         "id": 82,
@@ -2609,7 +2690,8 @@
         ],
         "confidence": "high",
         "needs_human_review": false,
-        "human_review_reason": null
+        "human_review_reason": null,
+        "composio_native_support": true
     },
     {
         "id": 83,
@@ -2642,7 +2724,8 @@
         ],
         "confidence": "high",
         "needs_human_review": false,
-        "human_review_reason": null
+        "human_review_reason": null,
+        "composio_native_support": true
     },
     {
         "id": 84,
@@ -2674,7 +2757,8 @@
         ],
         "confidence": "high",
         "needs_human_review": true,
-        "human_review_reason": "Merchant underwriting and regional contract required to obtain gateway credentials."
+        "human_review_reason": "Merchant underwriting and regional contract required to obtain gateway credentials.",
+        "composio_native_support": false
     },
     {
         "id": 85,
@@ -2707,7 +2791,8 @@
         ],
         "confidence": "high",
         "needs_human_review": false,
-        "human_review_reason": null
+        "human_review_reason": null,
+        "composio_native_support": true
     },
     {
         "id": 86,
@@ -2739,7 +2824,8 @@
         ],
         "confidence": "high",
         "needs_human_review": false,
-        "human_review_reason": null
+        "human_review_reason": null,
+        "composio_native_support": true
     },
     {
         "id": 87,
@@ -2771,7 +2857,8 @@
         ],
         "confidence": "high",
         "needs_human_review": false,
-        "human_review_reason": null
+        "human_review_reason": null,
+        "composio_native_support": true
     },
     {
         "id": 88,
@@ -2804,7 +2891,8 @@
         ],
         "confidence": "high",
         "needs_human_review": true,
-        "human_review_reason": "Cannot register sandbox without verified corporate registration docs"
+        "human_review_reason": "Cannot register sandbox without verified corporate registration docs",
+        "composio_native_support": true
     },
     {
         "id": 89,
@@ -2836,7 +2924,8 @@
         ],
         "confidence": "high",
         "needs_human_review": true,
-        "human_review_reason": "Requires enterprise sales walkthrough and corporate business bank verification"
+        "human_review_reason": "Requires enterprise sales walkthrough and corporate business bank verification",
+        "composio_native_support": true
     },
     {
         "id": 90,
@@ -2868,7 +2957,8 @@
         ],
         "confidence": "high",
         "needs_human_review": true,
-        "human_review_reason": "Requires corporate verification and direct contact with sales manager"
+        "human_review_reason": "Requires corporate verification and direct contact with sales manager",
+        "composio_native_support": false
     },
     {
         "id": 91,
@@ -2897,7 +2987,8 @@
         ],
         "confidence": "high",
         "needs_human_review": false,
-        "human_review_reason": null
+        "human_review_reason": null,
+        "composio_native_support": false
     },
     {
         "id": 92,
@@ -2926,7 +3017,8 @@
         ],
         "confidence": "high",
         "needs_human_review": false,
-        "human_review_reason": null
+        "human_review_reason": null,
+        "composio_native_support": false
     },
     {
         "id": 93,
@@ -2959,7 +3051,8 @@
         ],
         "confidence": "high",
         "needs_human_review": false,
-        "human_review_reason": null
+        "human_review_reason": null,
+        "composio_native_support": true
     },
     {
         "id": 94,
@@ -2982,12 +3075,13 @@
         "evidence": [
             {
                 "claim": "auth_methods and self_serve",
-                "url": "https://composio.dev"
+                "url": "https://docs.consensus.app"
             }
         ],
         "confidence": "high",
         "needs_human_review": false,
-        "human_review_reason": null
+        "human_review_reason": null,
+        "composio_native_support": false
     },
     {
         "id": 95,
@@ -3015,7 +3109,8 @@
         ],
         "confidence": "high",
         "needs_human_review": false,
-        "human_review_reason": null
+        "human_review_reason": null,
+        "composio_native_support": false
     },
     {
         "id": 96,
@@ -3043,7 +3138,8 @@
         ],
         "confidence": "high",
         "needs_human_review": false,
-        "human_review_reason": null
+        "human_review_reason": null,
+        "composio_native_support": false
     },
     {
         "id": 97,
@@ -3072,7 +3168,8 @@
         ],
         "confidence": "high",
         "needs_human_review": false,
-        "human_review_reason": null
+        "human_review_reason": null,
+        "composio_native_support": false
     },
     {
         "id": 98,
@@ -3100,7 +3197,8 @@
         ],
         "confidence": "high",
         "needs_human_review": false,
-        "human_review_reason": null
+        "human_review_reason": null,
+        "composio_native_support": false
     },
     {
         "id": 99,
@@ -3132,7 +3230,8 @@
         ],
         "confidence": "high",
         "needs_human_review": false,
-        "human_review_reason": null
+        "human_review_reason": null,
+        "composio_native_support": true
     },
     {
         "id": 100,
@@ -3165,6 +3264,7 @@
         ],
         "confidence": "high",
         "needs_human_review": false,
-        "human_review_reason": null
+        "human_review_reason": null,
+        "composio_native_support": true
     }
 ]

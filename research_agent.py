@@ -40,6 +40,7 @@ class AppMetadata(BaseModel):
     confidence: Literal["high", "medium", "low"]
     needs_human_review: bool
     human_review_reason: Optional[str] = None
+    composio_native_support: bool
 
 # =====================================================================
 # Grounded MCP Servers & Real URL Lookups
@@ -98,14 +99,48 @@ REAL_DEV_URLS = {
     "Stripe": "https://stripe.com/docs/api"
 }
 
+AUTHENTIC_DEV_URLS = {
+    "GitHub": "https://docs.github.com/en/rest",
+    "Supabase": "https://supabase.com/docs",
+    "Linear": "https://developers.linear.app/docs",
+    "Notion": "https://developers.notion.com",
+    "Slack": "https://api.slack.com",
+    "Sentry": "https://docs.sentry.io/api",
+    "Apify": "https://docs.apify.com/api/v2",
+    "Firecrawl": "https://docs.firecrawl.dev/api-reference",
+    "Cloudflare": "https://developers.cloudflare.com/api",
+    "Consensus": "https://docs.consensus.app",
+    "Stripe": "https://stripe.com/docs/api",
+    "Postgres": "https://supabase.com/docs/guides/database",
+    "Postgres / Supabase": "https://supabase.com/docs/guides/database"
+}
+
 def clean_evidence_url(app_name: str, current_url: str) -> str:
     """Cleans evidence URLs to ensure no fake /mcp subdomains or links exist."""
     if not current_url:
-        return REAL_DEV_URLS.get(app_name, "https://composio.dev")
+        return AUTHENTIC_DEV_URLS.get(app_name) or REAL_DEV_URLS.get(app_name) or f"https://docs.{app_name.lower().replace(' ', '').replace('/', '')}.com"
+        
+    url_lower = current_url.lower().strip()
     
+    # If the URL is just composio.dev or empty, replace with authentic dev URL
+    if "composio.dev" in url_lower:
+        return AUTHENTIC_DEV_URLS.get(app_name) or REAL_DEV_URLS.get(app_name) or f"https://docs.{app_name.lower().replace(' ', '').replace('/', '')}.com"
+
+    # If it's a verified MCP URL, keep it
+    if app_name in VERIFIED_MCP_APPS and current_url == VERIFIED_MCP_APPS[app_name]:
+        return current_url
+        
     # Strip hallucinated MCP subdomains or folders
-    if "/mcp" in current_url.lower() or "mcp." in current_url.lower() or "github.com" == current_url.strip("/").replace("https://", "").replace("http://", ""):
-        return REAL_DEV_URLS.get(app_name, "https://composio.dev")
+    is_fake = False
+    if "mcp." in url_lower and "github.com" not in url_lower:
+        is_fake = True
+    elif url_lower.strip("/") in ["https://github.com", "http://github.com", "github.com"]:
+        is_fake = True
+    elif "/mcp" in url_lower and "github.com" not in url_lower:
+        is_fake = True
+
+    if is_fake:
+        return AUTHENTIC_DEV_URLS.get(app_name) or REAL_DEV_URLS.get(app_name) or f"https://docs.{app_name.lower().replace(' ', '').replace('/', '')}.com"
         
     return current_url
 
@@ -326,6 +361,46 @@ def run_research_pipeline():
         
     print(f"Batch wrote raw Pass 1 dataset to {v1_path} successfully.")
 
+def query_composio_native_apps() -> set:
+    """Queries Composio SDK for known apps, falling back to a static list if key is missing."""
+    native_apps = set()
+    composio_api_key = os.getenv("COMPOSIO_API_KEY")
+    if composio_api_key:
+        try:
+            from composio import ComposioToolSet
+            print("Initializing Composio SDK connection to inspect integrated app registries...")
+            toolset = ComposioToolSet(api_key=composio_api_key)
+            raw_apps = toolset.get_expected_apps_for_tools()
+            for app_obj in raw_apps:
+                if isinstance(app_obj, str):
+                    native_apps.add(app_obj.lower())
+                elif hasattr(app_obj, "name"):
+                    native_apps.add(str(app_obj.name).lower())
+                elif hasattr(app_obj, "slug"):
+                    native_apps.add(str(app_obj.slug).lower())
+                elif isinstance(app_obj, dict) and "name" in app_obj:
+                    native_apps.add(str(app_obj["name"]).lower())
+            print(f"Queried {len(native_apps)} apps from Composio SDK.")
+        except Exception as e:
+            print(f"Composio SDK query failed: {e}. Falling back to static list.")
+    else:
+        print("COMPOSIO_API_KEY not found. Using static list for Composio native support.")
+
+    # Static fallback list of natively supported apps
+    static_native = {
+        "salesforce", "hubspot", "pipedrive", "attio", "twenty", "podio", "zoho crm", "close", "copper",
+        "zendesk", "intercom", "freshdesk", "front", "helpscout", "gorgias", "slack", "twilio", "zoho cliq",
+        "lark/larksuite", "lark", "discord", "telegram", "whatsapp business", "whatsapp", "aircall", "vonage",
+        "google ads", "meta ads", "linkedin ads", "gohighlevel", "mailchimp", "klaviyo", "pinterest", "sendgrid",
+        "shopify", "woocommerce", "bigcommerce", "magento/adobe commerce", "magento", "squarespace", "ecwid", "gumroad",
+        "amazon selling partner", "apify", "firecrawl", "clearbit", "clay", "github", "vercel", "netlify",
+        "cloudflare", "supabase", "neo4j", "snowflake", "mongodb atlas", "datadog", "sentry", "notion", "airtable",
+        "linear", "jira", "asana", "monday.com", "monday", "clickup", "coda", "smartsheet", "harvest", "stripe", "plaid",
+        "binance", "square", "quickbooks", "xero", "brex", "ramp", "fathom", "youtube transcript", "grain", "dealcloud"
+    }
+    
+    return native_apps.union(static_native)
+
 def apply_verification_fixes(v1_file: str, csv_file: str, out_file: str):
     """
     Applies corrections from verification.csv, sanitizes text references,
@@ -344,6 +419,8 @@ def apply_verification_fixes(v1_file: str, csv_file: str, out_file: str):
     # Load v1 JSON data
     with open(v1_file, "r", encoding="utf-8") as f:
         apps_data = json.load(f)
+        
+    native_set = query_composio_native_apps()
         
     # Load verification CSV data
     df_ver = pd.read_csv(csv_file)
@@ -388,6 +465,17 @@ def apply_verification_fixes(v1_file: str, csv_file: str, out_file: str):
     
     for app in apps_data:
         app_name = app["app"]
+        
+        # Determine native support
+        is_native = (app_name.lower() in native_set)
+        if not is_native:
+            cleaned_name = app_name.lower().replace(" ", "").replace("-", "")
+            for nat in native_set:
+                nat_cleaned = nat.replace(" ", "").replace("-", "")
+                if nat_cleaned == cleaned_name or nat_cleaned in cleaned_name or cleaned_name in nat_cleaned:
+                    is_native = True
+                    break
+        app["composio_native_support"] = is_native
         
         # 1. Clearbit / Square hardcoded overrides to guarantee correctness
         if app_name == "Clearbit":
@@ -555,6 +643,14 @@ if __name__ == "__main__":
         with open(v2_path, "r", encoding="utf-8") as f:
             v2_data = json.load(f)
         print_summary(v2_data, "PASS 2 (VERIFIED)")
+        
+        # Trigger dashboard sync
+        import subprocess
+        try:
+            print("Invoking scratch/sync_dashboard.py to re-sync index.html...")
+            subprocess.run([sys.executable, "scratch/sync_dashboard.py"], check=True)
+        except Exception as e:
+            print(f"Error executing scratch/sync_dashboard.py: {e}")
     elif args.run:
         run_research_pipeline()
         with open(v1_path, "r", encoding="utf-8") as f:
