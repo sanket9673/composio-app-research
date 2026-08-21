@@ -8,7 +8,7 @@ This repository demonstrates a complete dual-pass verification loop:
 
 ---
 
-## 📊 Dashboard Preview
+## Dashboard Preview
 
 The repository includes a premium, single-page interactive dashboard (`index.html`) featuring:
 * **Top Metric Analytics**: Overview of OAuth2 dominance, overall self-serve percentage, category rankings, and primary integration blockers.
@@ -18,7 +18,7 @@ The repository includes a premium, single-page interactive dashboard (`index.htm
 
 ---
 
-## 📂 Repository Data Layout
+## Repository Data Layout
 
 * [`research_agent.py`](file:///Users/sanketkisanchavhan/Documents/What%20to%20do/research_agent.py): Asynchronous/batched research pipeline script supporting Gemini search grounding, Pydantic validation, and manual audit correction loading.
 * [`requirements.txt`](file:///Users/sanketkisanchavhan/Documents/What%20to%20do/requirements.txt): Declared Python package requirements.
@@ -67,7 +67,7 @@ python research_agent.py --verify
 
 ---
 
-## 🔍 Verification Methodology & Grounding
+## Verification Methodology & Grounding
 
 The initial automated research run suffered from typical LLM decay, incorrectly claiming a **96% MCP server adoption rate** with hallucinated subdomains like `mcp.podio.com`. 
 
@@ -77,7 +77,7 @@ Our verification loop addresses this through:
 
 ---
 
-## 🛠️ Human-in-the-Loop & Gating Analysis
+## Human-in-the-Loop & Gating Analysis
 
 Automated agents are blocked by platform-level gating. We flag apps as `needs_human_review` for:
 * **Enterprise paywalls**: Gated behind direct corporate contact (e.g., PitchBook).
